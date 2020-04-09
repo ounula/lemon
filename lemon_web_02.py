@@ -24,5 +24,5 @@ ele = driver.find_element_by_xpath('//following::div[@id="u1"]/a[@class ="pf"]')
 ActionChains(driver).move_to_element(ele).perform()
 
 WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,'//a[text()="高级搜索"]')))
-driver.find_element_by_xpath('//a[text()="高级搜索"]').click()
+driver.find_element_by_xpath('//a[text()="高级搜索"]').click()ol
 
