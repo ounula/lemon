@@ -4,8 +4,6 @@
 from selenium import webdriver
 from time import sleep
 
-options = webdriver.ChromeOptions()
-# 此步骤很重要，设置为开发者模式，防止被各大网站识别出来使用了Selenium
 driver = webdriver.Chrome()
 driver.get("http://hao123.com")
 sleep(2)
