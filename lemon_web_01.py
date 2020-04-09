@@ -2,7 +2,10 @@
 # @Time : 2020/4/8 12:36 
 # @Author : ZHH
 from time import sleep
+#鼠标操作库
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
+#显式等待库
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
