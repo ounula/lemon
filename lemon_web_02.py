@@ -9,6 +9,8 @@ from  selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 #导入鼠标操作库
 from  selenium.webdriver.common.action_chains import ActionChains
+#导入键盘操作库
+from selenium.webdriver.common.keys import Keys
 driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get("http://www.baidu.com")
@@ -35,5 +37,16 @@ sele.select_by_visible_text('微软 Word (.doc)')
 sele.select_by_value('rtf')
 #通过下标
 sele.select_by_index('4')
-
+'''
+键盘操作需要搭配send_keys()使用
+如
+send_keys(Keys.CONTROL,'a') 全选
+常用
+回车  Keys.ENTER
+删除键 Keys.BACK_SPACE
+空格键 Kes.SPACE
+制表键 Kes.TAB
+回退键 Kes.ESCAPE
+刷新     Kes.F5
+'''
 
