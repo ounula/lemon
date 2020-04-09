@@ -26,3 +26,7 @@ driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 sleep(1.5)
 #移动到页面顶部
 driver.execute_script("window.scrollTo(document.body.scrollHeigth,0)")
+'''
+#js
+js='var ele =document.getElementById("train_date");ele.readOnly;ele.value = "2018-12-30"'
+'''
