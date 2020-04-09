@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 driver=webdriver.Chrome(service_log_path="E:\\chromedriver.log")
 driver.get("http://www.baidu.com")
+# 隐式等待
 # driver.implicitly_wait(10)
 driver.maximize_window()
 driver.find_element_by_id("kw").send_keys("柠檬班")
@@ -27,3 +28,11 @@ print(handles)
 driver.switch_to.window(handles[0])
 driver.switch_to.window(handles[1])
 print(driver.current_window_handle)
+#alert 切换
+alert=driver.switch_to.alert
+#接受
+alert.accept()
+#取消
+alert.dismiss()
+#获取alert内容
+print(alert.text)
