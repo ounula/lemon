@@ -10,13 +10,16 @@ driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get("http://www.baidu.com")
 #找到鼠标要操作的元素
-WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,'//span[@class = "setting-text"]')))
-ele = driver.find_element_by_xpath('//span[@class = "setting-text"]')
-#实例化ActionChains类
-ac=ActionChains(driver)
-#将鼠标操作添加到actions列表中
-ac.move_to_element(ele)
-#调用perform()来执行鼠标操作
-ac.perform()
+WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,'//following::div[@id="u1"]/a[@class ="pf"]')))
+ele = driver.find_element_by_xpath('//following::div[@id="u1"]/a[@class ="pf"]')
+# #实例化ActionChains类
+# ac=ActionChains(driver)
+# #将鼠标操作添加到actions列表中
+# ac.move_to_element(ele)
+# #调用perform()来执行鼠标操作
+# ac.perform()
 #
 ActionChains(driver).move_to_element(ele).perform()
+
+WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,'//a[text()="高级搜索"]')))
+driver.find_element_by_xpath('//a[text()="高级搜索"]').click()
