@@ -6,6 +6,8 @@ from  selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from  selenium.webdriver.common.action_chains import ActionChains
 from  selenium.webdriver.common.by import By
+#导入select 库
+from selenium.webdriver.support.ui import Select
 driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get("http://www.baidu.com")
@@ -23,3 +25,4 @@ ActionChains(driver).move_to_element(ele).perform()
 
 WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,'//a[text()="高级搜索"]')))
 driver.find_element_by_xpath('//a[text()="高级搜索"]').click()
+
