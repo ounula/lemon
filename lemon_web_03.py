@@ -29,4 +29,5 @@ driver.execute_script("window.scrollTo(document.body.scrollHeigth,0)")
 '''
 #js
 js='var ele =document.getElementById("train_date");ele.readOnly;ele.value = "2018-12-30"'
+driver.execute_script(js)
 '''
